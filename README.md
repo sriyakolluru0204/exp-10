@@ -1,35 +1,60 @@
 # practical10
 
-Aim : study of panda
 
-Pandas is an essential, open-source Python library for data analysis and manipulation.
+Aim
+To learn and implement core pandas functionalities, including creating Series and DataFrames, accessing data using loc and iloc, modifying datasets, and performing basic statistical filtering.
 
-pd.Series(): Creates a one-dimensional labeled array capable of holding any data type.
+Theory
+1. Pandas Series
+A Series is a one-dimensional labeled array capable of holding any data type. It is the fundamental building block of pandas.
 
-pd.DataFrame(): Creates a two-dimensional, size-mutable, and tabular data structure with labeled axes.
+2. Pandas DataFrame
+A DataFrame is a two-dimensional, size-mutable, tabular data structure with labeled axes (rows and columns). It is essentially a collection of Series sharing the same index.
 
-df.shape: An attribute that returns a tuple representing the dimensionality of the DataFrame.
+3. Key Concepts & Commands
+Object Creation: pd.Series() creates a Series; pd.DataFrame() converts dictionaries into structured tables.
 
-df.ndim: Returns an integer representing the number of axes/dimensions.
+Metadata Access:
 
-df.columns: Returns the column labels of the DataFrame.
+.shape: Returns tuple of dimensions (rows, columns).
 
-df.dtypes: Returns the data types of each column.
+.ndim: Returns number of dimensions.
 
-df.loc[row_index, "ColumnName"]: Accesses a group of rows and columns by labels or a boolean array.
+.size: Returns total number of elements.
 
-df.iloc[row_index, col_index]: Accesses a group of rows and columns by integer-based positions.
+.columns: Lists column names.
 
-df.drop(): Removes specified rows or columns. In the notebook, axis=1 is used to specify a column removal.
+.dtypes: Displays data types of each column.
 
-df.mean(): Calculates the average of the values in a column.
+Data Access:
 
-df.max(): Returns the highest value in a column.
+df["column_name"]: Accesses a specific column.
 
-df.min(): Returns the lowest value in a column.
+.loc[row, col]: Accesses data by label/index.
 
-df[df["Marks"] > 80]: It filters the DataFrame to show only the rows where the condition (Marks greater than 80) is true.
+.iloc[index]: Accesses data by integer position.
 
-Conclusion:
+Data Manipulation:
 
-Hence pandas library were implented in python and operations were done using them.
+Column Addition: df["New"] = [...] adds a new feature.
+
+Update: Using .loc or .iloc to modify specific cell values.
+
+Drop: .drop(..., axis=1) removes a column.
+
+Statistical Analysis:
+
+.max(), .min(): Compute extremes.
+
+Boolean Indexing: df[df["Marks"] > 90] filters rows based on a condition.
+
+Conclusion
+Through this practical, we successfully executed several data manipulation tasks:
+
+Exploration: We analyzed DataFrame structure using shape, ndim, and dtypes.
+
+Modification: We performed CRUD (Create, Read, Update, Delete) operations, including adding columns, updating specific cell values, and dropping unnecessary data.
+
+Analysis: We applied statistical functions and conditional filtering to extract meaningful insights (e.g., finding top-performing students).
+
+These operations are the prerequisite for effective data cleaning and exploratory data analysis (EDA).
